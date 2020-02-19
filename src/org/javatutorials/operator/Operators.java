@@ -1,8 +1,8 @@
 package org.javatutorials.operator;
-import org.javatutorials.OOP.Override;
+import org.javatutorials.OOP.*;
 public class Operators {
     public static void main(String[] args) {
-        Override r1 = new Override();
+        org.javatutorials.OOP.Override r1 = new org.javatutorials.OOP.Override();
         r1.ret();
         System.out.println( 1==2);
         System.out.println( 1== 1);
