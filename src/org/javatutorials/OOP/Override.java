@@ -1,6 +1,9 @@
 package org.javatutorials.OOP;
 
 public class Override {
+    public void ret(){
+        System.out.println("return");
+    }
     public static void main(String[] args){
         V v1 = new V(3);
         R r1 = new R(2);
