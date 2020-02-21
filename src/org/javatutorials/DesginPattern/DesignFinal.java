@@ -1,5 +1,5 @@
 package org.javatutorials.DesginPattern;
-
+//인터페이스는 abstract 와 final 과 함께 대표적인 규제
 public class DesignFinal {
     //디자인 패턴은 이미 정해져있는 것이 많다. 따라서 만드는 것이 나쁜것은아니다. 어떤 의미에선 이미 최적화된 형태를 가져다 씀으로서 불편한 부분을 없앨 수 있다.
     public static void main(String[] args){
