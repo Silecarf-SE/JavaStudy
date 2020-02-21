@@ -7,8 +7,15 @@ interface Calculatorable{
     public void setOperand(int left, int right,int middle);
     public int sum(); // 인터페이스는 abstract 와 다르게 안을 구현할 수 없다.
 }
-class DummyClass implements Calculatorable{ //인터페이스를 완벽하게 구현해야 컴파일이 되기때문에 약속이 꺠질것이라는 문제가 거의 없다.
+interface SubCalculatorable{
+    public int avg();
+}
+interface SubSubCalculatorable extends SubCalculatorable{ // 상속도 가능
+    public int mul();
+}
+class DummyClass implements Calculatorable,SubSubCalculatorable{ //인터페이스를 완벽하게 구현해야 컴파일이 되기때문에 약속이 꺠질것이라는 문제가 거의 없다.
     // 특정한 클래스는 반드시 I 인터페이스를 기반으로 구현해야한다.
+    //상속된 상위 인터페이스도 모두 구현해야한다.
     int right;
     int left;
     int middle;
@@ -19,5 +26,12 @@ class DummyClass implements Calculatorable{ //인터페이스를 완벽하게 �
         this.left = left;
         this.right = right;
         this.middle = middle;
+    }
+    public int avg(){
+        return (this.right + this.left + this.middle)/3;
+    }
+    public int mul(){
+
+        return (this.right * this.left * this.middle);
     }
 }
